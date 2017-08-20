@@ -1,0 +1,23 @@
+<div class="row row-padding">
+    <button class="btn btn-success" (click)="redirectForm()">Add New!</button>
+</div>
+<div class="row">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of user ; let i = index" (click)="router.navigate(['user/form/', item.id])" >
+            <td scope="row">{{i + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td><a ><i class="glyphicon glyphicon-trash"></i></a></td>
+        </tr>       
+    </tbody>
+</table>
+</div>

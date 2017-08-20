@@ -1,0 +1,25 @@
+<div [formGroup]="addressForm">
+    <fildset>
+        <legend>Address</legend>
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input [(ngModel)]="item.street"  name="street" #street formControlName="street" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="suite">Suite</label>
+            <input [(ngModel)]="item.suite"  name="suite" #suite formControlName="suite" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input [(ngModel)]="item.city" name="city" #city formControlName="city" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="zipcode">Zipcode</label>
+            <input [(ngModel)]="item.zipcode" name="zipcode" #zipcode formControlName="zipcode" type="text" class="form-control">
+            <div *ngIf="addressForm.get('zipcode').hasError('required') && addressForm.get('zipcode').touched " >
+                <div class="alert alert-danger">Field zipcode is required.</div>
+            </div>
+        </div>
+        
+    </fildset>
+</div>

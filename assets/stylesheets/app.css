@@ -1,0 +1,6 @@
+.row-padding{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+tr { background-color: white }
+tr:hover td { background-color: lightblue };
