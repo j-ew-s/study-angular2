@@ -9,4 +9,6 @@ After watching the Angular course from Mosh Hamedani at Udemy (https://www.udemy
 
 For this project I used Angular 2 (from course), JsonPlaceholder(https://jsonplaceholder.typicode.com)and Bootstrap for design.
 
-#####If you find any better aproache, please, let me know! I love to learn some new skills.
+##### If you find any better aproache, please, let me know! I love to learn some new skills.
+
+
