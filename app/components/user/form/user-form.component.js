@@ -23,6 +23,7 @@ var UserFormComponent = (function () {
         this.router = router;
         this.route = route;
         this.isSaveMethod = false;
+        this.isLoading = false;
         this.form = this._fb.group({
             name: ['', forms_2.Validators.required],
             email: ['', forms_2.Validators.compose([forms_2.Validators.required, emailValidator_1.EmailValidator.shouldBeValid])],
@@ -37,10 +38,19 @@ var UserFormComponent = (function () {
     UserFormComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userId = this.route.snapshot.params['id'];
-        if (this.userId !== undefined)
+        if (this.userId !== undefined) {
+            this.isLoading = true;
             this._service.getUserById(this.userId).subscribe(function (s) {
-                return _this.item = new user_1.User(s);
+                _this.item = new user_1.User(s);
+                _this.isLoading = false;
+            }, function (e) {
+                _this.isLoading = false;
             });
+        }
+    };
+    UserFormComponent.prototype.sendMessage = function (success) {
+        this.messageStyle = success ? 'success' : 'error';
+        this.message = success ? 'Item saved!' : 'Ouch! An error happens during your action. Please get in touch with the Admin.';
     };
     UserFormComponent.prototype.onSubmit = function () {
         var _this = this;

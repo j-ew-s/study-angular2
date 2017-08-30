@@ -6,22 +6,22 @@
                 <label for="name">User Name</label>
                 <input [(ngModel)]="item.name" id="name" #name formControlName="name" type="text" class="form-control">
                 <div *ngIf="form.get('name').hasError('required')
-                            && form.get('name').touched " >
+                            && form.get('name').touched ">
                     <div class="alert alert-danger">Field Name is required.</div>
-               </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input [(ngModel)]="item.email"  name="email" #email formControlName="email"  type="text" class="form-control">
-                 <div *ngIf="form.get('email').hasError('required') 
-                             && form.get('email').touched" >
-                   <div class="alert alert-danger">Field Email is required.</div>
-               </div>
-               <div *ngIf=" form.get('email').hasError('shouldBeValid') && form.get('email').touched" class="alert alert-danger"> Email is invalid.</div>
+                <input [(ngModel)]="item.email" name="email" #email formControlName="email" type="text" class="form-control">
+                <div *ngIf="form.get('email').hasError('required') 
+                             && form.get('email').touched">
+                    <div class="alert alert-danger">Field Email is required.</div>
+                </div>
+                <div *ngIf=" form.get('email').hasError('shouldBeValid') && form.get('email').touched" class="alert alert-danger"> Email is invalid.</div>
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
-                <input [(ngModel)]="item.phone"  name="phone" #phone formControlName="phone" type="text" class="form-control">
+                <input [(ngModel)]="item.phone" name="phone" #phone formControlName="phone" type="text" class="form-control">
             </div>
 
         </fildset>
@@ -32,4 +32,13 @@
             <button class="btn btn-danger" type="cancel" (click)="router.navigate(['user/'])">Cancel</button>
         </div>
     </form>
+</div>
+
+
+<div *ngIf="isLoading">
+    <div class="loading-background">
+    </div>
+    <div *ngIf="isLoading" class="loading-icon">
+            <i class="fa fa-spinner fa-spin fa-3x"></i>
+        </div>
 </div>

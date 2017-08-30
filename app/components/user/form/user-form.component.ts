@@ -4,10 +4,10 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router, ActivatedRoute } from '@angular/router'
 
 import { AddressFormComponent } from './../../../../app/components/address/form/address-form.component'
-import { BaseController }       from './../../../../app/shared/baseController/base-controller.interface';
-import { EmailValidator }       from './../../../../app/shared/validators/emailValidator'
-import { User }                 from './../../../../app/objects/user'
-import { UserService }          from './../user.service'
+import { BaseController } from './../../../../app/shared/baseController/base-controller.interface';
+import { EmailValidator } from './../../../../app/shared/validators/emailValidator'
+import { User } from './../../../../app/objects/user'
+import { UserService } from './../user.service'
 
 @Component({
     selector: 'user-form',
@@ -20,6 +20,10 @@ export class UserFormComponent implements BaseController, OnInit {
     public form: FormGroup;
     public item: User;
     public userId: string;
+    public isLoading: boolean = false;
+
+    public messageStyle : string;
+    public message: string;
 
     @ViewChild(AddressFormComponent) addressView;
 
@@ -42,10 +46,22 @@ export class UserFormComponent implements BaseController, OnInit {
 
     ngOnInit() {
         this.userId = this.route.snapshot.params['id'];
-        if (this.userId !== undefined)
-            this._service.getUserById(this.userId).subscribe(s =>
-                this.item = new User(s)
+        if (this.userId !== undefined) {
+            this.isLoading = true;
+            this._service.getUserById(this.userId).subscribe(
+                s => {
+                    this.item = new User(s);
+                    this.isLoading = false;
+                }, e => {
+                    this.isLoading = false;
+                }
             );
+        }
+    }
+
+    sendMessage(success:boolean){
+        this.messageStyle = success ? 'success': 'error';
+        this.message = success ? 'Item saved!' : 'Ouch! An error happens during your action. Please get in touch with the Admin.'
     }
 
     onSubmit() {
