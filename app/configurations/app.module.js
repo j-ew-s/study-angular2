@@ -16,6 +16,7 @@ var app_component_1 = require('../../app/app.component');
 var not_found_component_1 = require('./../../app/not-found.component');
 var address_module_1 = require('../../app/components/address/address.module');
 var home_module_1 = require('../../app/components/home/home.module');
+var history_module_1 = require('../../app/components/history/history.module');
 var user_module_1 = require('../../app/components/user/user.module');
 var post_module_1 = require('../../app/components/post/post.module');
 var prevent_unsaved_changes_service_1 = require('../shared/routeAccess/prevent-unsaved-changes.service');
@@ -30,6 +31,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 common_1.CommonModule,
                 home_module_1.HomeModule,
+                history_module_1.HistoryModule,
                 http_1.HttpModule,
                 user_module_1.UserModule,
                 post_module_1.PostModule,
