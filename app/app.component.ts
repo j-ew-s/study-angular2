@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-
 import { NavBarComponent } from '../app/components/navbar/nav-bar.component';
-
-
 
 @Component({
     selector: 'my-app',
@@ -16,5 +13,5 @@ import { NavBarComponent } from '../app/components/navbar/nav-bar.component';
     directives: [NavBarComponent]
 })
 export class AppComponent {
-   
- }
+
+}
