@@ -5,10 +5,7 @@
         </div>
         <div class="history-card-div-icon ">
             <i class="glyphicon history-card-icon history-i" 
-            [ngClass]="{'glyphicon-bookmark': historyCard.action =='default', 
-                        'glyphicon-ok': historyCard.action == 'saved', 
-                        'glyphicon-trash': historyCard.action == 'deleted',
-                        'glyphicon-warning': historyCard.action == 'warning'}" aria-hidden="true"></i>
+            [ngClass]=" getActionIcon()" aria-hidden="true"></i>
         </div>
         <div class="history-card-content">
             <div class="history-card-title history-card-content-text">

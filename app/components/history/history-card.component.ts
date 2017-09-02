@@ -20,4 +20,12 @@ export class HistoryCardComponent implements OnInit {
         
     }
 
+    getActionIcon(): string{
+        let cssClass :string = "glyphicon-bookmark";
+        if(this.historyCard.action == 'success'){ cssClass = "glyphicon-ok"   }
+        else if(this.historyCard.action == 'trash'){ cssClass = "glyphicon-trash"}
+        else if(this.historyCard.action == 'warning'){ cssClass ="glyphicon-warning"}
+        return cssClass;
+    }
+
 }

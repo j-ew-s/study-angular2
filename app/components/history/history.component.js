@@ -9,12 +9,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var history_card_component_1 = require('./history-card.component');
+var historyCard_1 = require('../../objects/historyCard');
 var HistoryComponent = (function () {
     function HistoryComponent() {
-        this.title = "Tiiiitle";
-        this.message = "MEESAGE";
-        this.action = "thumbs-o-up";
+        this.items = [];
+        var objectList = [{
+                "title": "Adding a new component",
+                "message": "Added a new component to app. Need to import it to older features.",
+                "date": "12/12/12",
+                "action": "success",
+                "user": ""
+            },
+            {
+                "title": "There is no validation on user form",
+                "message": "It is important to implement validations. ",
+                "date": "11/12/12",
+                "action": "warning",
+                "user": ""
+            },
+            {
+                "title": "Removed all comments from user page",
+                "message": "All the comments are removed.No need for it anymore.",
+                "date": "11/12/12",
+                "action": "trash",
+                "user": ""
+            },
+            {
+                "title": "Its a default message",
+                "message": "It should not have any influence on app behavior, but was registered.",
+                "date": "10/12/12",
+                "action": "default",
+                "user": ""
+            },
+            {
+                "title": "History card created",
+                "message": "This feature were implemented due a CSS charge I made to myself. ",
+                "date": "10/12/12",
+                "action": "success",
+                "user": ""
+            }];
+        for (var _i = 0, objectList_1 = objectList; _i < objectList_1.length; _i++) {
+            var card = objectList_1[_i];
+            this.items.push(new historyCard_1.HistoryCard(card));
+        }
     }
+    ;
+    __decorate([
+        core_1.ViewChildren(history_card_component_1.HistoryCardComponent), 
+        __metadata('design:type', Object)
+    ], HistoryComponent.prototype, "historyCard", void 0);
     HistoryComponent = __decorate([
         core_1.Component({
             selector: 'history',

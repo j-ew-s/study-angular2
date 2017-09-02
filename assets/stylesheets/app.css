@@ -13,6 +13,11 @@ tr:hover td { background-color: lightblue }
     height: 26px;
 }
 
+fabStyle {
+    right: 20;
+    position: 'fixed';
+};
+
 .loading-background {
     background: gray;
     opacity: 0.5;

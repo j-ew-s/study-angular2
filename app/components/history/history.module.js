@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
 var history_component_1 = require('./history.component');
+var history_card_component_1 = require('./history-card.component');
 var HistoryModule = (function () {
     function HistoryModule() {
     }
@@ -23,10 +24,12 @@ var HistoryModule = (function () {
                 forms_1.ReactiveFormsModule,
             ],
             declarations: [
-                history_component_1.HistoryComponent
+                history_component_1.HistoryComponent,
+                history_card_component_1.HistoryCardComponent
             ],
             exports: [
-                history_component_1.HistoryComponent
+                history_component_1.HistoryComponent,
+                history_card_component_1.HistoryCardComponent
             ]
         }), 
         __metadata('design:paramtypes', [])
