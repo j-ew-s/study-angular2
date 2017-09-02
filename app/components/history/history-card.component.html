@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-8 history-card ">
+        <div *ngIf="first">
+            <i class="glyphicon glyphicon-flag history-card-top-icon" aria-hidden="true"></i>
+        </div>
+        <div class="history-card-div-icon ">
+            <i class="glyphicon history-card-icon history-i" 
+            [ngClass]="{'glyphicon-bookmark': historyCard.action =='default', 
+                        'glyphicon-ok': historyCard.action == 'saved', 
+                        'glyphicon-trash': historyCard.action == 'deleted',
+                        'glyphicon-warning': historyCard.action == 'warning'}" aria-hidden="true"></i>
+        </div>
+        <div class="history-card-content">
+            <div class="history-card-title history-card-content-text">
+                <p>{{historyCard.title}}</p>
+            </div>
+            <div class="history-card-message history-card-content-text">
+                <p>{{historyCard.message}}</p>
+            </div>
+        </div>
+        <div *ngIf="last">
+            <i class="glyphicon glyphicon-home history-card-top-botton" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>

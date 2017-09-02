@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule  }   from '@angular/forms';
 
 import { HistoryComponent } from './history.component';
+import { HistoryCardComponent } from './history-card.component';
 
 
 @NgModule({
@@ -13,10 +14,12 @@ import { HistoryComponent } from './history.component';
         ReactiveFormsModule,
     ],
     declarations: [
-        HistoryComponent
+        HistoryComponent,
+        HistoryCardComponent
     ],
     exports: [
-        HistoryComponent
+        HistoryComponent,
+        HistoryCardComponent
     ]
 })
 export class HistoryModule {
