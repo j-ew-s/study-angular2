@@ -12,23 +12,16 @@ var core_1 = require('@angular/core');
 var historyCard_1 = require('../../objects/historyCard');
 var HistoryCardComponent = (function () {
     function HistoryCardComponent() {
-        this.warnning = false;
-        this.saved = false;
-        this.deleted = false;
-        this.default = false;
+        this.first = false;
+        this.last = false;
     }
-    HistoryCardComponent.prototype.ngOnInit = function () {
-    };
     HistoryCardComponent.prototype.getActionIcon = function () {
         var cssClass = "glyphicon-bookmark";
-        if (this.historyCard.action == 'success') {
+        if (this.historyCard.action == 'done') {
             cssClass = "glyphicon-ok";
         }
         else if (this.historyCard.action == 'trash') {
             cssClass = "glyphicon-trash";
-        }
-        else if (this.historyCard.action == 'warning') {
-            cssClass = "glyphicon-warning";
         }
         return cssClass;
     };
@@ -36,6 +29,14 @@ var HistoryCardComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', historyCard_1.HistoryCard)
     ], HistoryCardComponent.prototype, "historyCard", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], HistoryCardComponent.prototype, "first", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], HistoryCardComponent.prototype, "last", void 0);
     HistoryCardComponent = __decorate([
         core_1.Component({
             selector: 'history-card',

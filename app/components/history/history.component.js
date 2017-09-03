@@ -18,14 +18,14 @@ var HistoryComponent = (function () {
                 "title": "Adding a new component",
                 "message": "Added a new component to app. Need to import it to older features.",
                 "date": "12/12/12",
-                "action": "success",
+                "action": "done",
                 "user": ""
             },
             {
                 "title": "There is no validation on user form",
                 "message": "It is important to implement validations. ",
                 "date": "11/12/12",
-                "action": "warning",
+                "action": "done",
                 "user": ""
             },
             {
@@ -46,7 +46,7 @@ var HistoryComponent = (function () {
                 "title": "History card created",
                 "message": "This feature were implemented due a CSS charge I made to myself. ",
                 "date": "10/12/12",
-                "action": "success",
+                "action": "done",
                 "user": ""
             }];
         for (var _i = 0, objectList_1 = objectList; _i < objectList_1.length; _i++) {

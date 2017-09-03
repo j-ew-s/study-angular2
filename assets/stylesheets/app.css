@@ -14,9 +14,11 @@ tr:hover td { background-color: lightblue }
 }
 
 fabStyle {
-    right: 20;
-    position: 'fixed';
-};
+   float: right;
+    position: fixed;
+    top: 90%;
+    left: 80%;
+}
 
 .loading-background {
     background: gray;
@@ -74,22 +76,37 @@ fabStyle {
 .history-card-top-icon{
     margin-left: -4px;
     font-size: 25px;
+    margin-top: -20px;
+    color: 0078d7;
 }
-.history-card-top-botton{
+.history-card-botton-icon{
     margin-left: -15px;
     font-size: 25px;
+    margin-top: 13%;
+    color: 0078d7;
+}
+.history-card-div-bottom{
+    position: absolute;
 }
 .history-card-content{
     padding-left: 2%;
-    border: solid 1px lightgrey;
     margin-left: 12px;
     padding-right: 9px;
-    border-radius: 10px;
+    border-left: solid 2px #0078d7;
+    border-top: solid 1px #4399dc;
+    border-right:  solid 1px #4399dc;
+    border-bottom: solid 1px #4399dc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
 }
 .history-card-content-text{
     background-color: lightgray;
     padding-top: 1%;
     padding-left: 1%;
+    font-family: Verdana;
+    font-size: 20px;
 }
 
 .history-card-title{

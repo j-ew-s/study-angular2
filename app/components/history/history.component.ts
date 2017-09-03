@@ -17,14 +17,14 @@ export class HistoryComponent {
             "title": "Adding a new component",
             "message": "Added a new component to app. Need to import it to older features.",
             "date": "12/12/12",
-            "action": "success",
+            "action": "done",
             "user": ""
         },
         {
             "title": "There is no validation on user form",
             "message": "It is important to implement validations. ",
             "date": "11/12/12",
-            "action": "warning",
+            "action": "done",
             "user": ""
         },
         {
@@ -45,7 +45,7 @@ export class HistoryComponent {
             "title": "History card created",
             "message": "This feature were implemented due a CSS charge I made to myself. ",
             "date": "10/12/12",
-            "action": "success",
+            "action": "done",
             "user": ""
         }];
 

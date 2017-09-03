@@ -1,9 +1,5 @@
 <div>
-    <div *ngFor="let item of items">
-        <history-card [historyCard]="item"></history-card>
-    </div>
-    jjj
-    <div class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored ">
-        <i class="material-icons fabStyle">+</i>
+    <div *ngFor="let item of items; let i = index">
+        <history-card [historyCard]="item" [first]="i == 0" [last]="i == items.length -1"></history-card>
     </div>
 </div>
