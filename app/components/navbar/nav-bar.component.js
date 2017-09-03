@@ -18,6 +18,7 @@ var NavBarComponent = (function () {
         this._router.isActive('post', this.postActive);
         this._router.isActive('user', this.userActive);
         this._router.isActive('home', this.homeActive);
+        this._router.isActive('history', this.historyActive);
     };
     NavBarComponent = __decorate([
         core_1.Component({

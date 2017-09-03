@@ -9,11 +9,13 @@ export class NavBarComponent{
     postActive : boolean;
     userActive : boolean;
     homeActive : boolean;
+    historyActive : boolean;
 
     constructor(private _router : Router){}
     onClick(){
        this._router.isActive('post',this.postActive);
        this._router.isActive('user',this.userActive);
        this._router.isActive('home',this.homeActive);
+       this._router.isActive('history',this.historyActive);
     }
 }
